@@ -105,7 +105,7 @@ onMounted(() => {
         <VisBulletLegend :items="legend" />
       </div>
 
-      <VisXYContainer :data="observations" :height="560">
+      <VisXYContainer :data="observations" :height="560" :yDomain=[-90,90] >
         <VisLine :x :y :color />
         <VisAxis
           type="x"
