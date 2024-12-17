@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue';
 
-import { VisXYContainer, VisAxis, VisArea, VisBulletLegend } from '@unovis/vue';
+import { VisXYContainer, VisAxis, VisBulletLegend, VisLine } from '@unovis/vue';
 import type { BulletLegendItemInterface } from '@unovis/ts';
 
 import { calculateAstronomicalObservations, type Observation } from '@/utils';
@@ -106,7 +106,7 @@ onMounted(() => {
       </div>
 
       <VisXYContainer :data="observations" :height="560">
-        <VisArea :x :y :color />
+        <VisLine :x :y :color />
         <VisAxis
           type="x"
           label="Hour of Day"
